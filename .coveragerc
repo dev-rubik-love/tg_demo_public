@@ -1,0 +1,14 @@
+[run]
+omit =
+    tests/functional/utils.py
+
+[report]
+exclude_lines =
+    pragma: no cover
+    if TYPE_CHECKING:
+    @abstractmethod
+    @pytest.mark.skip
+    @mark.skip
+    @skip
+    raise NotImplemented
+    return None

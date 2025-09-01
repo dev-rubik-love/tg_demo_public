@@ -1,0 +1,8 @@
+from app.postconfig import translators
+
+
+SUCCESS_VOTE_POSITIVE = translators.votes("SUCCESS_VOTE_POSITIVE")
+SUCCESS_VOTE_ZERO = translators.votes("SUCCESS_VOTE_ZERO")
+SUCCESS_VOTE_NEGATIVE = translators.votes("SUCCESS_VOTE_NEGATIVE")
+VOTE_ALREADY_SET_POSITIVE = translators.votes("VOTE_ALREADY_SET_POSITIVE")
+VOTE_ALREADY_SET_NEGATIVE = translators.votes("VOTE_ALREADY_SET_NEGATIVE")

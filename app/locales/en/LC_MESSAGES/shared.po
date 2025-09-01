@@ -1,0 +1,215 @@
+# Long comments for line: "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+# 1) Reason for the rule:
+# English, like many other languages, has a grammatical system for expressing quantity.
+# Singular and plural are grammatical numbers that potentially impact all parts of speech.
+# It is essential to correctly translate these nuances to maintain the naturalness of the language in software.
+#
+# 2) Workflow and specification:
+# We use the "Plural-Forms" attribute to provide gettext with the rules for pluralization in English.
+# This attribute helps gettext understand how to select the correct translation depending on the numerical context.
+# The "nplurals" parameter is used to specify the total number of grammatical numbers in the language, which is 2 for English.
+# The "plural" condition provides the logic to select between these forms based on the given quantity.
+#
+# 3) Implementation:
+# The condition "n != 1" in the "plural" attribute means if the quantity `n` is not equal to 1, use the plural form.
+# When `n` equals 1, it means we are dealing with a singular entity, so we use the singular form.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"POT-Creation-Date: 2023-05-21 16:25+0000\n"
+"PO-Revision-Date: 2023-05-21 16:25+0000\n"
+"Last-Translator: David Shiko dsb321mp@gmail.com>\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+
+msgid "ABOUT"
+msgstr "About"
+
+msgid "ACCEPT"
+msgstr "Accept"
+
+msgid "AGE"
+msgstr "Age"
+
+msgid "ALAS_USER_NOT_FOUND"
+msgstr "Seems like this user is not using our bot yet, here is the link to add {BOT_USERNAME}."
+
+msgid "ALLOW"
+msgstr "Allow"
+
+msgid "BACK"
+msgstr "Back"
+
+msgid "CANCEL"
+msgstr "Cancel"
+
+msgid "CANCELED"
+msgstr "Canceled."
+
+msgid "COMMON_ERROR_EXPLANATION"
+msgstr ""
+"Unknown error.\n"
+"Try again later.\n"
+"I am already working on it."
+
+msgid "COMPLETE"
+msgstr "complete"
+
+msgid "COMPLETED"
+msgstr "Completed."
+
+msgid "CONTINUE"
+msgstr "Continue"
+
+msgid "DECLINE"
+msgstr "Decline"
+
+msgid "DISALLOW"
+msgstr "Disallow"
+
+msgid "EASTER_EGG_KEYBOARD"
+msgstr ""
+"Secret: in Telegram you cannot edit a keyboard, so I will send a new message "
+"and delete it immediately."
+
+msgid "ENTER_THE_NUMBER"
+msgstr "Enter a number. For example: \"25\""
+
+msgid "ERROR_LOCATION_SERVICE"
+msgstr ""
+"Oops, location service is temporarily unavailable. Please enter your "
+"location manually or press \"{SKIP_KEYWORD}\"."
+
+msgid "FORWARD"
+msgstr "Go Ahead"
+
+msgid "FOR_READY"
+msgstr "To continue, type \"{READY}\"."
+
+msgid "FROM"
+msgstr "out of"
+
+msgid "GENDER"
+msgstr "Gender"
+
+msgid "GO"
+msgstr "Let's go!"
+
+msgid "GOAL"
+msgstr "Goal"
+
+msgid "GOODBYE"
+msgstr "Goodbye!"
+
+msgid "HELP"
+msgstr "Help"
+
+msgid "INCORRECT_CONTINUE"
+msgstr ""
+"{MISUNDERSTAND}\n"
+"Write \"{CONTINUE}\" or \"{CANCEL}\"."
+
+msgid "INCORRECT_FINISH"
+msgstr ""
+"{MISUNDERSTAND}\n"
+"Write \"{READY}\" to move to the next step"
+
+msgid "INCORRECT_SEND"
+msgstr ""
+"{MISUNDERSTAND}\n"
+"Write \"{SEND}\" or \"{CANCEL}\""
+
+msgid "INCORRECT_USER"
+msgstr ""
+"{MISUNDERSTAND}\n"
+"Send their contact, @nickname or enter their user id."
+
+msgid "I_AM_BOT"
+msgstr "I am a bot. I am here to show how it's looks."
+
+msgid "LOCATION"
+msgstr "Location"
+
+msgid "MISUNDERSTAND"
+msgstr "I do not understand you."
+
+msgid "MORE_ACTIONS"
+msgstr "What else can be done?"
+
+msgid "NAME"
+msgstr "Name"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "PENDING"
+msgstr "Pending"
+
+msgid "READY"
+msgstr "Ready"
+
+msgid "REG_REQUIRED"
+msgstr ""
+"Only registered users can use this command.\n"
+"\"{REG_CMD}\""
+
+msgid "SEND"
+msgstr "Send"
+
+msgid "SKIP"
+msgstr "Skip"
+
+msgid "TEXT_TOO_LONG"
+msgstr ""
+"Text is too long. Maximum characters allowed: {MAX_TEXT_LEN}\n"
+"Characters used: {USED_TEXT_LEN}"
+
+msgid "TMP_RESTRICTION"
+msgstr "(this is a temporary restriction, we will try to remove it soon)"
+
+msgid "UNCLICKABLE_BUTTON"
+msgstr "This button does nothing."
+
+msgid "UNKNOWN_BUTTON"
+msgstr "It seems this button does nothing, we apologize for the inconvenience."
+
+msgid "UNKNOWN"
+msgstr "Unknown"
+
+msgid "UNSKIPPABLE_STEP"
+msgstr "This step cannot be skipped."
+
+msgid "USER_DECLINED_SHARE_PROPOSAL"
+msgstr "Unfortunately, user {DECLINER_USERNAME} declined your proposal."
+
+msgid "USER_DECLINED_REQUEST_PROPOSAL"
+msgstr "Unfortunately, user {DECLINER_USERNAME} declined your request."
+
+msgid "USER_GOT_SHARE_PROPOSAL"
+msgstr "User {USER_ID} received your invitation."
+# msgstr "User {USERNAME} (id {USER_ID}) got your invitation."
+
+msgid "USER_GOT_REQUEST_PROPOSAL"
+msgstr "User {USER_ID} got your request."
+# msgstr "User {USERNAME} (id {USER_ID}) got your request."
+
+msgid "WAIT"
+msgstr "Wait"
+
+msgid "INTERNAL_ERROR"
+msgstr "Internal error. We apologize."
+
+msgid "HIDE"
+msgstr "Hide"
+
+msgid "POSSIBLE_INACTIVE_ACCOUNT"
+msgstr "Maybe his account was deleted or blocked."
+
+msgid "SHOW_PROFILE"
+msgstr "Show profile"

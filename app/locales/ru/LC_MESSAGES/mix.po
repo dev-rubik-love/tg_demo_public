@@ -1,0 +1,96 @@
+# 1) Reason for the rule:
+# Russian is a language with complex rules for expressing quantity.
+# It uses a different form for quantities ending with 1, 2-4, and all others.
+# Properly reflecting this in software translations contributes to the overall quality of localization and user experience.
+#
+# 2) Workflow and specification:
+# The "Plural-Forms" attribute provides gettext with the rules for pluralization in Russian.
+# It helps gettext select the correct translation depending on the numerical context.
+# The "nplurals" parameter indicates that Russian uses 3 forms to express different quantities.
+# The "plural" attribute provides the logic to choose between these forms.
+#
+# 3) Implementation:
+# The logic "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)" can be read as follows:
+# If the last digit of `n` is 1 and `n` does not end with 11, use the first form.
+# If the last digit of `n` is 2, 3, or 4 (but `n` does not end with 12, 13, or 14), use the second form.
+# In all other cases, use the third form.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"POT-Creation-Date: 2023-05-21 16:25+0000\n"
+"PO-Revision-Date: 2023-05-21 16:25+0000\n"
+"Last-Translator: David Shiko dsb321mp@gmail.com>\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "FAQ"
+msgstr ""
+"<b>Что умеет бот?</b>\n"
+"- Бот ищет людей с общими интересами.\n"
+"\n"
+"<b>Как он это делает?</b>\n"
+"- Бот анализирует ваши лайки, тем самым узнавая ваш внутренний мир.\n"
+"Предположительно, 2 человека с общим внутренним миром будут иметь и общие лайки.\n"
+"\n"
+"<b>Как пользоваться ботом?</b>\n"
+"Бот имеет 2 режима:\n"
+"1. Публичный режим покажет людей с наибольшим количеством общих для вас интересов - команда: {{PUBLIC_MODE_CMD}}.\n"
+"2. Персональный режим покажет сколько у вас общих интересов с конкретным человеком - команда: {{PERSONAL_MODE_CMD}}.\n"
+"\n"
+"<b>Попробовать публичный режим?</b>\n"
+"- Команда: {{PUBLIC_MODE_CMD}}.\n"
+"3 шага:\n"
+"1. Оцените персональные посты (поставьте лайки или дизлайки).\n"
+"2. Начните поиск по общим интересам и узнайте.\n"
+"3. Готово! - Бот покажет людей с наибольшим количеством общих для вас интересов,"
+"а так-же применит к ним ваши фильтры.\n"
+"\n"
+"<b>Попробовать персональный режим.</b> - команда: {{PERSONAL_MODE_CMD}}.\n"
+"<b>3 шага:</b>\n"
+"<b>1</b>. Оцените персональные посты (поставьте лайки или дизлайки).\n"
+"<b>2</b>. Укажите человека, с которым хотите узнать количество общих интересов.\n"
+"<b>3</b>. Готово! Бот проведет анализ и скажет % общих интересов и другие интересные цифры.\n"
+"\n"
+"<b>Что дают общие лайки?</b>\n"
+"- Общие интересы призваны помочь заводить знакомства с людьми,\n"
+"которые вам интересны и которым вы интересны.\n"
+"\n"
+"<b>Зачем лайкать посты?</b>\n"
+"- Чтобы бот смог найти вам знакомства по общим интересам - он должен узнать ваши интересы.\n"
+"Лайки - это быстрый и удобный способ рассказать боту что вам нравится.\n"
+"\n"
+"<b>Что дает мне регистрация?</b>\n"
+"- Регистрация позволяет другим людям находить вас. Когда вы используете команду {{SEARCH_CMD}}"
+"- вы ищете людей, которые уже зарегистрированы.\n"
+"\n"
+"{{BOT_NAME}}. Версия 0.96.\n"
+"Автор - {MAIN_ADMIN_NAME}."
+
+msgid "START_MODE"
+msgstr ""
+"Что вы хотите?\n"
+"Узнать общие интересы с другом или партнером -\n"
+"- команда \"{PERSONAL_MODE_CMD}\".\n"
+"Найти людей с общими со мной интересами -\n"
+"- команда \"{PUBLIC_MODE_CMD}\"."
+
+msgid "PUBLIC_MODE"
+msgstr ""
+"Оцените посты из коллекций.\n"
+"Так-же можно оценить посты на нашем канала с постами: {{POSTS_CHANNEL_LINK}}."
+# "(В каждой коллекции максимум {{MAX_POSTS_COUNT}} постов).\n"
+
+msgid "PERSONAL_MODE"
+msgstr ""
+"Шаг 1 из 2:\n"
+"Оцените посты из коллекций.\n"
+"Пропустить - Возможно поиск не даст результата."
+#  "(В каждой коллекции максимум {{MAX_POSTS_COUNT}} постов).\n"
+
+msgid "DONATE"
+msgstr "Поддержать проект {URL} - спасибо!"

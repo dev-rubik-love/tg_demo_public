@@ -1,0 +1,44 @@
+# Long comments for line: "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+# 1) Reason for the rule:
+# English, like many other languages, has a grammatical system for expressing quantity.
+# Singular and plural are grammatical numbers that potentially impact all parts of speech.
+# It is essential to correctly translate these nuances to maintain the naturalness of the language in software.
+#
+# 2) Workflow and specification:
+# We use the "Plural-Forms" attribute to provide gettext with the rules for pluralization in English.
+# This attribute helps gettext understand how to select the correct translation depending on the numerical context.
+# The "nplurals" parameter is used to specify the total number of grammatical numbers in the language, which is 2 for English.
+# The "plural" condition provides the logic to select between these forms based on the given quantity.
+#
+# 3) Implementation:
+# The condition "n != 1" in the "plural" attribute means if the quantity `n` is not equal to 1, use the plural form.
+# When `n` equals 1, it means we are dealing with a singular entity, so we use the singular form.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"POT-Creation-Date: 2023-05-21 16:25+0000\n"
+"PO-Revision-Date: 2023-05-21 16:25+0000\n"
+"Last-Translator: David Shiko dsb321mp@gmail.com>\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+
+msgid "SUCCESS_VOTE_POSITIVE"
+msgstr "Success! I'm giving a like!"
+
+msgid "SUCCESS_VOTE_ZERO"
+msgstr "Success! I've reset it."
+
+msgid "SUCCESS_VOTE_NEGATIVE"
+msgstr "Success! I'm giving a dislike!"
+
+msgid "VOTE_ALREADY_SET_POSITIVE"
+msgstr "The strongest like has already been given."
+
+msgid "VOTE_ALREADY_SET_NEGATIVE"
+msgstr "The strongest dislike has already been given."

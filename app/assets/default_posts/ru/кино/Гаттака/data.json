@@ -1,0 +1,15 @@
+{
+  "title": "Гаттака",
+  "image": "./image.jpg",
+  "original_title": "Gattaca",
+  "director": "Эндрю Никкол",
+  "genre": "Научная фантастика, Драма",
+  "year": 1997,
+  "country": "США",
+  "language": "Английский",
+  "runtime": "106 минут",
+  "budget": "$36 миллионов",
+  "box_office": "$12.5 миллионов",
+  "rating_IMDB": "7.8/10",
+  "kinopoisk_url": "URL_to_kinopoisk_page"
+}

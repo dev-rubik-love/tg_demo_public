@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  app:
+    image: python:3.10
+    volumes:
+      - ../:/project  # Adjust volume mount to map the parent directory to /project
+    working_dir: /project
+    command: bash -c "pip install -r requirements.txt && python -m app"
+    env_file:
+      - .env  # Подключение файла .env
+    networks:
+      - bot-network
+    depends_on:
+      - db
+    #user: "1000:1000"  # Run as non user, UID and GID of the virtual user
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_HOST_AUTH_METHOD: ${POSTGRES_HOST_AUTH_METHOD}  # Required encrypt password for connection
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - bot-network
+    #user: "1000:1000"  # Run as non user, UID and GID of the virtual user
+
+  backup:
+    image: tiredofit/db-backup
+    environment:
+      # - DEBUG_MODE=true
+      # - CONTAINER_ENABLE_MONITORING=FALSE
+      - DB_TYPE=postgres
+      - DB_HOST=db
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASSWORD}
+      - DB_DUMP_FREQ=1440 # Frequency of dumps in minutes (1440 minutes = 1 day)
+      - DB_CLEANUP_TIME=14400 # 10 days
+      - DB_DUMP_TARGET=/backup
+    volumes:
+      - ../db_backups:/backup
+    networks:
+      - bot-network
+    depends_on:
+      - db
+    #user: "1000:1000"  # Run as non user, UID and GID of the virtual user
+
+volumes:
+  postgres_data:
+
+networks:
+  bot-network:
+

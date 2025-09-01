@@ -1,0 +1,15 @@
+{
+  "title": "Одарённая",
+  "image": "./image.jpg",
+  "original_title": "GIFTED",
+  "director": "Марк Уэбб",
+  "genre": "Драма",
+  "year": 2017,
+  "country": "США",
+  "language": "Английский",
+  "runtime": "101 минута",
+  "budget": "$7 миллионов",
+  "box_office": "$43 миллиона",
+  "rating_IMDB": "7.6/10",
+  "kinopoisk_url": "URL_to_kinopoisk_page"
+}
