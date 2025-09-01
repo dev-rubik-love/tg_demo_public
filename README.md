@@ -4,6 +4,7 @@
 # Dating service based on shared likes An example of my code as of March 2025. 
 This is NOT the final version, missed 6 mothn approximately, (please contact me if you need a fork). To run it, you will need the "rubik_core" package - this is the core logic of the service, which you can write yourself or contact me for. The code is published for demonstration purposes only and is not intended for actual deployment.
 
+```
 david@david-ThinkPad-E480:~/PycharmProjects$ scc rubik_tg_bot/
 ───────────────────────────────────────────────────────────────────────────────
 Language                 Files     Lines   Blanks  Comments     Code Complexity
@@ -68,4 +69,4 @@ Processed 368456 bytes, 0.368 megabytes (SI)
 david@david-ThinkPad-E480:~/PycharmProjects$ scc --version
 scc version 3.1.0
 david@david-ThinkPad-E480:~/PycharmProjects$ 
-
+```
